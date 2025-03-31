@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Streetellers</title>
+    <style>
+        /* 기본적인 DOS 환경 설정 */
+        body {
+            background-color: black;
+            color: lime;
+            font-family: 'Courier New', monospace;
+            margin: 0;
+            padding: 20px;
+            font-size: 1.2em;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: lime;
+            margin-top: 20px;
+            text-transform: uppercase;
+        }
+
+        h3 {
+            color: yellow;
+        }
+
+        /* 각 투어 항목 스타일 */
+        .tour-item {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 2px solid lime;
+            border-radius: 5px;
+        }
+
+        .book-button {
+            background-color: black;
+            color: lime;
+            padding: 10px 20px;
+            border: 2px solid lime;
+            text-decoration: none;
+            font-family: 'Courier New', monospace;
+            font-size: 1.2em;
+        }
+
+        .book-button:hover {
+            background-color: lime;
+            color: black;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            color: lime;
+            background-color: black;
+            padding: 10px;
+        }
+
+        .contact-message {
+            color: red;
+            font-size: 1em; 
+            font-weight: bold;
+            text-align: center;
+            margin-top: 10px; 
+            background-color: transparent; /* 배경색 제거 */
+            border: none; /* 테두리 제거 */
+        }
+
+        .console {
+            margin-top: 20px;
+            padding: 20px;
+            border: 2px solid lime;
+            background-color: black;
+            color: lime;
+            font-family: 'Courier New', monospace;
+            font-size: 1.2em;
+        }
+
+        .console input {
+            background-color: black;
+            color: lime;
+            border: none;
+            outline: none;
+            width: 100%;
+            font-size: 1.2em;
+        }
+
+        .console input:focus {
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Streetellers</h1>
+
+    <!-- 영어로 된 안내 메시지 (타이틀 바로 아래 위치) -->
+    <div class="contact-message">
+        Before making a payment, please contact me via <a href="https://wa.me/821046777662" style="color: yellow; text-decoration: underline;">WhatsApp</a> or email to confirm the availability of your preferred tour date.
+    </div>
+
+    <h2></h2>
+
+    <!-- 서울 야경 투어 -->
+    <div class="tour-item">
+        <h3>Seoul Night Tour A (4hours) : 18:00 - 22:00 </h3>
+        <p>Tour itinerary : Changgyeonggung palace -> Gwangjang Market (Foody Tour) -> Jogyesa Temple (4 hours)</p>
+        <p>Meetup Place and Time : Hyehwa Station Exit No.4 at 17:50</p>
+        <p>Price per Person : $80</p>
+    </div>
+
+    <!-- 커스텀 투어 4H -->
+    <div class="tour-item">
+        <h3>Customize Your Tour (4H) </h3>
+        <p>Meetup Place and time may vary depends on where you stay in Seoul.</p>
+        <p>Price per Person : $50</p>
+    </div>
+  
+      <!-- 커스텀 투어 8H -->
+    <div class="tour-item">
+        <h3>Customize Your Tour (8H) </h3>
+        <p>Meetup Place and time may vary depends on where you stay in Seoul.</p>
+        <p>Price per Person : $80</p>
+    </div>
+
+    <script src="https://www.paypal.com/sdk/js?client-id=BAApkoKiLVJxBep-s_Lp5fdwDjyPiSXTVF23aJENe5mWI2n0bA9-xXox10WOWrQzFALqC6iAz8V6aNR7Es&components=hosted-buttons&disable-funding=venmo&currency=USD"></script>
+    <div id="paypal-container-YFB4GZWWUR4XL"></div>
+    <script>
+        paypal.HostedButtons({
+            hostedButtonId: "YFB4GZWWUR4XL",
+        }).render("#paypal-container-YFB4GZWWUR4XL")
+    </script>
+
+    <footer>
+        <p>Whatsapp : <a href="https://wa.me/821046777662" style="color: yellow; text-decoration: underline;">+82-10-4677-7662</a> Email : streetellers@gmail.com</p>
+        <p> © 2025. Streetellers All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
